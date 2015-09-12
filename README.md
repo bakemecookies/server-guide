@@ -4,9 +4,9 @@
 
 1. [Log in](https://console.aws.amazon.com/ec2/home) to Amazon EC2.
 2. Launch a new instance.
-    * **AMI**: [Ubuntu](http://www.ubuntu.com/) Server 14.04 LTS (HVM), SSD Volume Type
-    * **Instance Type**: t2.micro
-    * **Security Group**: SSH, HTTP, and HTTPS enabled
+   * **AMI**: [Ubuntu](http://www.ubuntu.com/) Server 14.04 LTS (HVM), SSD Volume Type
+   * **Instance Type**: t2.micro
+   * **Security Group**: SSH, HTTP, and HTTPS enabled
 
 ## DNS
 
@@ -19,12 +19,13 @@
 Identity files should be located locally at `~/.ssh/`. Adjust all identity-related steps from here on accordingly if they are located elsewhere or named differently.
 
 1. (Recommended) Create/edit your local SSH configuration at `~/.ssh/config`, i.e.:
-```
-    Host <host-name>
-        HostName <ip-address>
-        User ubuntu
-        IdentityFile ~/.ssh/<key-pair>.pem
-```
+
+   ```
+   Host <host-name>
+      HostName <ip-address>
+      User ubuntu
+      IdentityFile ~/.ssh/<key-pair>.pem
+   ```
 2. Perform an initial SSH into the server: `ssh <server-name>` (short, if configured), or `ssh -i ~/.ssh/<key-pair>.pem ubuntu@<server-name>` (long).
 
 ## Ubuntu
@@ -38,3 +39,7 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 1. Install the MySQL APT repository: `wget http://dev.mysql.com/get/mysql-apt-config_0.3.7-1ubuntu14.04_all.deb`, then `sudo dpkg --install mysql-apt-config_0.3.7-1ubuntu14.04_all.deb`, then `sudo apt-get update`.
 2. Install MySQL (5.6.26-1ubuntu14.04): `sudo apt-get install mysql-server`.
 3. Install [libmysqlclient-dev](http://packages.ubuntu.com/trusty/libmysqlclient-dev) (5.6.26-1ubuntu14.04): `sudo apt-get install libmysqlclient-dev`.
+
+## [Passenger](https://www.phusionpassenger.com/), [Ruby](https://www.ruby-lang.org/en/), and [Nginx](http://nginx.org/)
+
+1. Follow the instructions in [Phusion](http://www.phusion.nl/)'s [guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/aws/nginx/oss/trusty/install_passenger.html).
