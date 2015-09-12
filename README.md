@@ -1,10 +1,17 @@
 # server-guide
 
+*server-guide* is a recipe for deploying simple web applications on [Amazon Web Services](http://aws.amazon.com/).
+  * **Operating System**: [Ubuntu](http://www.ubuntu.com/)
+  * **Application Server**: [Passenger](https://www.phusionpassenger.com/)
+  * **Web Server**: [Nginx](http://nginx.org/)
+  * **Database**: [MySQL](http://www.mysql.com/)
+  * **Language**: [Ruby](https://www.ruby-lang.org/en/)
+
 ## Server
 
 1. [Log in](https://console.aws.amazon.com/ec2/home) to Amazon EC2.
 2. Launch a new instance.
-   * **AMI**: [Ubuntu](http://www.ubuntu.com/) Server 14.04 LTS (HVM), SSD Volume Type
+   * **AMI**: Ubuntu Server 14.04 LTS (HVM), SSD Volume Type
    * **Instance Type**: t2.micro
    * **Security Group**: SSH, HTTP, and HTTPS enabled
 
@@ -34,13 +41,13 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 2. Perform an initial system update: `sudo apt-get update`, then `sudo apt-get dist-upgrade`, then `sudo reboot`.
 3. (Recommended) Install and enable [Byobu](http://byobu.co/) (5.77-0ubuntu1.2): `sudo apt-get install byobu`, then `byobu-enable`.
 
-## [MySQL](http://www.mysql.com/)
+## MySQL
 
 1. Install the MySQL APT repository: `wget http://dev.mysql.com/get/mysql-apt-config_0.3.7-1ubuntu14.04_all.deb`, then `sudo dpkg --install mysql-apt-config_0.3.7-1ubuntu14.04_all.deb`, then `sudo apt-get update`.
 2. Install MySQL (5.6.26-1ubuntu14.04): `sudo apt-get install mysql-server`.
 3. Install [libmysqlclient-dev](http://packages.ubuntu.com/trusty/libmysqlclient-dev) (5.6.26-1ubuntu14.04): `sudo apt-get install libmysqlclient-dev`.
 
-## [Ruby](https://www.ruby-lang.org/en/)
+## Ruby
 
 1. Install [RVM](https://rvm.io/) and Ruby: `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`, then `\curl -sSL https://get.rvm.io | bash -s stable --ruby`, then `source /home/ubuntu/.rvm/scripts/rvm`.
 
@@ -48,7 +55,7 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
 1. Use [GitHub](https://github.com)'s [guide](https://help.github.com/articles/managing-deploy-keys) to set up a read-only deploy key.
 
-## [Passenger](https://www.phusionpassenger.com/) and [Nginx](http://nginx.org/)
+## Passenger and Nginx
 
 1. Follow the instructions in [Phusion](http://www.phusion.nl/)'s [guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/aws/nginx/oss/trusty/install_passenger.html).
 2. Enable [Gzip](https://www.gnu.org/software/gzip/): `sudo nano /etc/nginx/nginx.conf`, uncommenting the `gzip` lines.
