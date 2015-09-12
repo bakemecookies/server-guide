@@ -27,6 +27,12 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 ```
 2. Perform an initial SSH into the server: `ssh <server-name>` (short, if configured), or `ssh -i ~/.ssh/<key-pair>.pem ubuntu@<server-name>` (long).
 
+## Ubuntu
+
+1. Change `hostname`: `sudo nano /etc/hostname`, with contents `<server-name>`; then `sudo nano /etc/hosts`, edit the `localhost` line to read `127.0.0.1 localhost <server-name>`; then `sudo hostname <server-name>`.
+2. Perform an initial system update: `sudo apt-get update`, then `sudo apt-get dist-upgrade`, then `sudo reboot`.
+3. (Recommended) Install and enable [Byobu](http://byobu.co/) (5.77-0ubuntu1.2): `sudo apt-get install byobu`, then `byobu-enable`.
+
 ## [MySQL](http://www.mysql.com/)
 
 1. Install the MySQL APT repository: `wget http://dev.mysql.com/get/mysql-apt-config_0.3.7-1ubuntu14.04_all.deb`, then `sudo dpkg --install mysql-apt-config_0.3.7-1ubuntu14.04_all.deb`, then `sudo apt-get update`.
