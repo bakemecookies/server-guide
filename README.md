@@ -1,2 +1,34 @@
 # server-guide
-Server configuration guide for Ruby and MySQL-based apps
+
+## Server
+
+1. [Log in](https://console.aws.amazon.com/ec2/home) to Amazon EC2.
+2. Launch a new instance.
+    * **AMI**: [Ubuntu](http://www.ubuntu.com/) Server 14.04 LTS (HVM), SSD Volume Type
+    * **Instance Type**: t2.micro
+    * **Security Group**: SSH, HTTP, and HTTPS enabled
+
+## DNS
+
+1. [Log in](https://console.aws.amazon.com/route53/home) to Amazon Route 53.
+2. Create a DNS `A` record for every desired hosted zone pointing to the IP address of the new server created above.
+3. (Recommended) Create a `*.<hosted-zone>` DNS `A` alias record for every `A` record created above.
+
+## SSH
+
+Identity files should be located locally at `~/.ssh/`. Adjust all identity-related steps from here on accordingly if they are located elsewhere or named differently.
+
+1. (Recommended) Create/edit your local SSH configuration at `~/.ssh/config`, i.e.:
+```
+    Host <host-name>
+        HostName <ip-address>
+        User ubuntu
+        IdentityFile ~/.ssh/<key-pair>.pem
+```
+2. Perform an initial SSH into the server: `ssh <server-name>` (short, if configured), or `ssh -i ~/.ssh/<key-pair>.pem ubuntu@<server-name>` (long).
+
+## [MySQL](http://www.mysql.com/)
+
+1. Install the MySQL APT repository: `wget http://dev.mysql.com/get/mysql-apt-config_0.3.7-1ubuntu14.04_all.deb`, then `sudo dpkg --install mysql-apt-config_0.3.7-1ubuntu14.04_all.deb`, then `sudo apt-get update`.
+2. Install MySQL (5.6.26-1ubuntu14.04): `sudo apt-get install mysql-server`.
+3. Install [libmysqlclient-dev](http://packages.ubuntu.com/trusty/libmysqlclient-dev) (5.6.26-1ubuntu14.04): `sudo apt-get install libmysqlclient-dev`.
