@@ -40,6 +40,10 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 2. Install MySQL (5.6.26-1ubuntu14.04): `sudo apt-get install mysql-server`.
 3. Install [libmysqlclient-dev](http://packages.ubuntu.com/trusty/libmysqlclient-dev) (5.6.26-1ubuntu14.04): `sudo apt-get install libmysqlclient-dev`.
 
-## [Passenger](https://www.phusionpassenger.com/), [Ruby](https://www.ruby-lang.org/en/), and [Nginx](http://nginx.org/)
+## [Ruby](https://www.ruby-lang.org/en/)
+
+1. Install [RVM](https://rvm.io/) and Ruby: `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`, then `\curl -sSL https://get.rvm.io | bash -s stable --ruby`, then `source /home/ubuntu/.rvm/scripts/rvm`.
+
+## [Passenger](https://www.phusionpassenger.com/) and [Nginx](http://nginx.org/)
 
 1. Follow the instructions in [Phusion](http://www.phusion.nl/)'s [guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/aws/nginx/oss/trusty/install_passenger.html).
