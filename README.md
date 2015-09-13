@@ -59,3 +59,5 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
 1. Follow the instructions in [Phusion](http://www.phusion.nl/)'s [guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/aws/nginx/oss/trusty/install_passenger.html).
 2. Enable [Gzip](https://www.gnu.org/software/gzip/): `sudo nano /etc/nginx/nginx.conf`, uncommenting the `gzip` lines.
+
+[![Creative Commons CC0 1.0 Universal Public Domain Dedication](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
