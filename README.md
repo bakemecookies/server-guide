@@ -49,7 +49,7 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
 ## Ruby
 
-1. Install [RVM](https://rvm.io/) and Ruby: `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`, then `\curl -sSL https://get.rvm.io | bash -s stable --ruby`, then `source /home/ubuntu/.rvm/scripts/rvm`.
+1. Install [RVM](https://rvm.io/) (1.26.11) and Ruby (2.2.1): `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`, then `\curl -sSL https://get.rvm.io | bash -s stable --ruby`, then `source /home/ubuntu/.rvm/scripts/rvm`.
 
 ## [Git](http://git-scm.com/)
 
