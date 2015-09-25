@@ -54,7 +54,7 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 ## [Git](http://git-scm.com/)
 
 1. Use [GitHub](https://github.com)'s [guide](https://help.github.com/articles/managing-deploy-keys) to set up a read-only deploy key.
-2. (Recommended) Set up a SSH config: `nano ~/.ssh/config`, with contents:
+2. Set up a SSH config: `nano ~/.ssh/config`, with contents:
 
  ```
  Host github.com
