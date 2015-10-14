@@ -29,9 +29,9 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
    ```
    Host <host-name>
-      HostName <ip-address>
-      User ubuntu
-      IdentityFile ~/.ssh/<key-pair>.pem
+        HostName <ip-address>
+        User ubuntu
+        IdentityFile ~/.ssh/<key-pair>.pem
    ```
 2. Perform an initial SSH into the server: `ssh <server-name>` (short, if configured), or `ssh -i ~/.ssh/<key-pair>.pem ubuntu@<server-name>` (long).
 
@@ -46,6 +46,15 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 1. Install the MySQL APT repository: `wget http://dev.mysql.com/get/mysql-apt-config_0.3.7-1ubuntu14.04_all.deb`, then `sudo dpkg --install mysql-apt-config_0.3.7-1ubuntu14.04_all.deb`, then `sudo apt-get update`.
 2. Install MySQL (5.6.27-1ubuntu14.04): `sudo apt-get install mysql-server`.
 3. Install [libmysqlclient-dev](http://packages.ubuntu.com/trusty/libmysqlclient-dev) (5.6.27-1ubuntu14.04): `sudo apt-get install libmysqlclient-dev`.
+4. (Recommended) Create/edit the `ubuntu` user's MySQL option file at `~/.my.cnf`, i.e.:
+
+   ```
+   [client<database>]
+   database='<database>'
+   user='<database>'
+   password='<password>'
+   prompt='<database>> '
+   ```
 
 ## Ruby
 
@@ -56,11 +65,11 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 1. Use [GitHub](https://github.com)'s [guide](https://help.github.com/articles/managing-deploy-keys) to set up a read-only deploy key.
 2. Set up a SSH config: `nano ~/.ssh/config`, with contents:
 
- ```
- Host github.com
-    User git
-    IdentityFile <deploy-key>
- ```
+   ```
+   Host github.com
+        User git
+        IdentityFile <deploy-key>
+   ```
  then `chmod 644 ~/.ssh/config`.
 
 ## Passenger and Nginx
