@@ -3,7 +3,7 @@
 *server-guide* is a recipe for deploying simple web applications on [Amazon Web Services](http://aws.amazon.com/).
   * **Operating System**: [Ubuntu](http://www.ubuntu.com/)
   * **Application Server**: [Passenger](https://www.phusionpassenger.com/)
-  * **Web Server**: [Nginx](http://nginx.org/)
+  * **Web Server**: [nginx](http://nginx.org/)
   * **Database**: [MySQL](http://www.mysql.com/)
   * **Language**: [Ruby](https://www.ruby-lang.org/en/)
 
@@ -72,9 +72,9 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
    ```
  then `chmod 644 ~/.ssh/config`.
 
-## Passenger and Nginx
+## Passenger and nginx
 
-1. Follow the instructions in [Phusion](http://www.phusion.nl/)'s [guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/aws/nginx/oss/trusty/install_passenger.html) to install Passenger (5.0.20-1~trusty1) with Nginx (1.8.0-8.5.0.20~trusty1).
+1. Follow the instructions in [Phusion](http://www.phusion.nl/)'s [guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/aws/nginx/oss/trusty/install_passenger.html) to install Passenger (5.0.20-1~trusty1) with nginx (1.8.0-8.5.0.20~trusty1).
 2. Enable [Gzip](https://www.gnu.org/software/gzip/): `sudo nano /etc/nginx/nginx.conf`, uncommenting the `gzip` lines.
 
 ---
