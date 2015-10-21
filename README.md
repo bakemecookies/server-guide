@@ -66,11 +66,13 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 2. Set up a SSH config: `nano ~/.ssh/config`, with contents:
 
    ```
-   Host github.com
+   Host <repository>
+        HostName github.com
         User git
         IdentityFile <deploy-key>
    ```
  then `chmod 644 ~/.ssh/config`.
+3. Install the repository: `git clone <repository>:<repository-owner>/<repository>.git`.
 
 ## Passenger and nginx
 
