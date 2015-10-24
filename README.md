@@ -43,7 +43,7 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
 ## MySQL
 
-1. Install the MySQL APT repository: `wget http://dev.mysql.com/get/mysql-apt-config_0.3.7-1ubuntu14.04_all.deb`, then `sudo dpkg --install mysql-apt-config_0.3.7-1ubuntu14.04_all.deb`, then `sudo apt-get update`.
+1. Install the MySQL APT repository: `wget https://dev.mysql.com/get/mysql-apt-config_0.5.3-1_all.deb`, then `sudo dpkg --install mysql-apt-config_0.5.3-1_all.deb`, then `sudo apt-get update`.
 2. Install MySQL (5.6.27-1ubuntu14.04): `sudo apt-get install mysql-server`.
 3. Install [libmysqlclient-dev](http://packages.ubuntu.com/trusty/libmysqlclient-dev) (5.6.27-1ubuntu14.04): `sudo apt-get install libmysqlclient-dev`.
 4. (Recommended) Create/edit the `ubuntu` user's MySQL option file at `~/.my.cnf`, i.e.:
@@ -76,7 +76,7 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
 ## Passenger and nginx
 
-1. Follow the instructions in [Phusion](http://www.phusion.nl/)'s [guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/aws/nginx/oss/trusty/install_passenger.html) to install Passenger (5.0.20-1~trusty1) with nginx (1.8.0-8.5.0.20~trusty1).
+1. Follow the instructions in [Phusion](http://www.phusion.nl/)'s [guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/aws/nginx/oss/trusty/install_passenger.html) to install Passenger (5.0.21-1~trusty1) with nginx (1.8.0-8.5.0.21~trusty1).
 2. Enable [Gzip](https://www.gnu.org/software/gzip/): `sudo nano /etc/nginx/nginx.conf`, uncommenting the `gzip` lines.
 
 ---
