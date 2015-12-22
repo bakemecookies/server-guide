@@ -62,8 +62,9 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
 ## [Git](http://git-scm.com/)
 
-1. Use [GitHub](https://github.com)'s [guide](https://help.github.com/articles/managing-deploy-keys) to set up a read-only deploy key (email and passphrase are not necessary).
-2. Set up a SSH config: `nano ~/.ssh/config`, with contents:
+1. Install Git (1.9.1-1ubuntu0.2): `sudo apt-get install git`.
+2. Use [GitHub](https://github.com)'s [guide](https://help.github.com/articles/managing-deploy-keys) to set up a read-only deploy key (email and passphrase are not necessary).
+3. Set up a SSH config: `nano ~/.ssh/config`, with contents:
 
    ```
    Host <repository>
@@ -72,11 +73,11 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
         IdentityFile <deploy-key>
    ```
  then `chmod 644 ~/.ssh/config`.
-3. Install the repository: `git clone <repository>:<repository-owner>/<repository>.git`.
+4. Install the repository: `git clone <repository>:<repository-owner>/<repository>.git`.
 
 ## Passenger and nginx
 
-1. Follow the instructions in [Phusion](http://www.phusion.nl/)'s [guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/aws/nginx/oss/trusty/install_passenger.html) to install Passenger (5.0.22-1~trusty1) with nginx (1.8.0-8.5.0.22~trusty1).
+1. Follow the instructions in [Phusion](http://www.phusion.nl/)'s [guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/aws/nginx/oss/trusty/install_passenger.html) to install Passenger (5.0.23-1~trusty1) with nginx (1.8.0-8.5.0.23~trusty1).
 2. Enable [Gzip](https://www.gnu.org/software/gzip/): `sudo nano /etc/nginx/nginx.conf`, uncommenting the `gzip` lines.
 
 ---
