@@ -77,7 +77,7 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
 ## Passenger and nginx
 
-1. Follow the instructions in [Phusion](http://www.phusion.nl/)'s [guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/aws/nginx/oss/trusty/install_passenger.html) to install Passenger (5.0.23-1~trusty1) with nginx (1.8.0-8.5.0.23~trusty1).
+1. Follow the instructions in [Phusion](http://www.phusion.nl/)'s [guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/aws/nginx/oss/trusty/install_passenger.html) to install Passenger (5.0.24-1~trusty1) with nginx (1.8.1-8.5.0.24~trusty1).
 2. Enable [Gzip](https://www.gnu.org/software/gzip/): `sudo nano /etc/nginx/nginx.conf`, uncommenting the `gzip` lines.
 
 ---
