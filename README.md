@@ -62,7 +62,7 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
 ## [Git](http://git-scm.com/)
 
-1. Install Git (1.9.1-1ubuntu0.2): `sudo apt-get install git`.
+1. Install Git (1.9.1-1ubuntu0.3): `sudo apt-get install git`.
 2. Use [GitHub](https://github.com)'s [guide](https://help.github.com/articles/managing-deploy-keys) to set up a read-only deploy key (email and passphrase are not necessary).
 3. Set up a SSH config: `nano ~/.ssh/config`, with contents:
 
