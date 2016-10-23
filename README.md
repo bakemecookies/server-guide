@@ -1,11 +1,10 @@
 # server-guide
 
-*server-guide* is a recipe for deploying simple web applications on [Amazon Web Services](http://aws.amazon.com/).
-  * **Operating System**: [Ubuntu](http://www.ubuntu.com/)
-  * **Application Server**: [Passenger](https://www.phusionpassenger.com/)
-  * **Web Server**: [nginx](http://nginx.org/)
-  * **Database**: [MySQL](http://www.mysql.com/)
-  * **Language**: [Ruby](https://www.ruby-lang.org/en/)
+*server-guide* is a recipe for deploying simple web applications on [Amazon Web Services](https://aws.amazon.com).
+  * **Operating System**: [Ubuntu](https://www.ubuntu.com)
+  * **Web Server**: [Vapor](https://vapor.codes)
+  * **Database**: [MySQL](http://www.mysql.com)
+  * **Language**: [Swift](https://swift.org)
 
 ## Server
 
@@ -56,10 +55,6 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
    prompt='<database>> '
    ```
 
-## Ruby
-
-1. Install [RVM](https://rvm.io/) (1.27.0) and Ruby (2.3.0): `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`, then `\curl -sSL https://get.rvm.io | bash -s stable --ruby`, then `source /home/ubuntu/.rvm/scripts/rvm`.
-
 ## [Git](http://git-scm.com/)
 
 1. Install Git (1.9.1-1ubuntu0.3): `sudo apt-get install git`.
@@ -75,10 +70,9 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
  then `chmod 644 ~/.ssh/config`.
 4. Install the repository: `git clone <repository>:<repository-owner>/<repository>.git`.
 
-## Passenger and nginx
+## Vapor
 
-1. Follow the instructions in [Phusion](http://www.phusion.nl/)'s [guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/aws/nginx/oss/trusty/install_passenger.html) to install Passenger (5.0.30-1~trusty1) with nginx (1.10.1-8.5.0.30~trusty1).
-2. Enable [Gzip](https://www.gnu.org/software/gzip/): `sudo nano /etc/nginx/nginx.conf`, uncommenting the `gzip` lines.
+1. Follow the instructions in Vapor's [guide](https://vapor.github.io/documentation/getting-started/install-swift-3-ubuntu.html) to install Vapor (1.1.1).
 
 ---
 
