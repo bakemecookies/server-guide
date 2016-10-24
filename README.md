@@ -72,7 +72,7 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
 ## Vapor
 
-1. Follow the instructions in Vapor's [guide](https://vapor.github.io/documentation/getting-started/install-swift-3-ubuntu.html) to install Vapor (1.1.1).
+1. Follow the instructions in Vapor's [guide](https://vapor.github.io/documentation/getting-started/install-swift-3-ubuntu.html) to install Vapor (1.1.0).
 
 ---
 
