@@ -10,7 +10,7 @@
 
 1. [Log in](https://console.aws.amazon.com/ec2/home) to Amazon EC2.
 2. Launch a new instance.
-   * **AMI**: Ubuntu Server 14.04 LTS (HVM), SSD Volume Type
+   * **AMI**: Ubuntu Server 16.04 LTS (HVM), SSD Volume Type
    * **Instance Type**: t2.micro
    * **Security Group**: SSH, HTTP, and HTTPS enabled
 
@@ -38,13 +38,13 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
 1. Change `hostname`: `sudo nano /etc/hostname`, with contents `<server-name>`; then `sudo nano /etc/hosts`, edit the `localhost` line to read `127.0.0.1 localhost <server-name>`; then `sudo hostname <server-name>`.
 2. Perform an initial system update: `sudo apt-get update`, then `sudo apt-get dist-upgrade`, then `sudo reboot`.
-3. (Recommended) Install and enable [Byobu](http://byobu.co/) (5.77-0ubuntu1.2): `sudo apt-get install byobu`, then `byobu-enable`.
+3. (Recommended) Install and enable [Byobu](http://byobu.co/) (5.106-0ubuntu1): `sudo apt-get install byobu`, then `byobu-enable`.
 
 ## MySQL
 
 1. Install the MySQL APT repository: `wget https://dev.mysql.com/get/mysql-apt-config_0.8.0-1_all.deb`, then `sudo dpkg --install mysql-apt-config_0.8.0-1_all.deb`, then `sudo apt-get update`.
-2. Install MySQL (5.7.16-1ubuntu14.04): `sudo apt-get install mysql-server`.
-3. Install [libmysqlclient-dev](http://packages.ubuntu.com/trusty/libmysqlclient-dev) (5.7.16-1ubuntu14.04): `sudo apt-get install libmysqlclient-dev`.
+2. Install MySQL (5.7.16-1ubuntu16.04): `sudo apt-get install mysql-server`.
+3. Install [libmysqlclient-dev](http://packages.ubuntu.com/trusty/libmysqlclient-dev) (5.7.16-1ubuntu16.04): `sudo apt-get install libmysqlclient-dev`.
 4. (Recommended) Create/edit the `ubuntu` user's MySQL option file at `~/.my.cnf`, i.e.:
 
    ```
@@ -57,7 +57,7 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
 ## [Git](http://git-scm.com/)
 
-1. Install Git (1.9.1-1ubuntu0.3): `sudo apt-get install git`.
+1. Install Git (2.7.4-0ubuntu1): `sudo apt-get install git`.
 2. Use [GitHub](https://github.com)'s [guide](https://help.github.com/articles/managing-deploy-keys) to set up a read-only deploy key (email and passphrase are not necessary).
 3. Set up a SSH config: `nano ~/.ssh/config`, with contents:
 
@@ -72,7 +72,7 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
 ## Vapor
 
-1. Follow the instructions in Vapor's [guide](https://vapor.github.io/documentation/getting-started/install-swift-3-ubuntu.html) to install Vapor (1.1.0).
+1. Follow the instructions in Vapor's [guide](https://vapor.github.io/documentation/getting-started/install-swift-3-ubuntu.html) to install Vapor (1.1.10).
 2. See Vapor's [example](https://github.com/vapor/example) to set up Vapor with [Upstart](http://upstart.ubuntu.com).
 
 ---
