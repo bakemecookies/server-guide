@@ -67,8 +67,8 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
         User git
         IdentityFile <deploy-key>
    ```
- then `chmod 644 ~/.ssh/config`.
-4. Install the repository: `git clone <repository>:<repository-owner>/<repository>.git`.
+   then `chmod 644 ~/.ssh/config`.
+ 4. Install the repository: `git clone <repository>:<repository-owner>/<repository>.git`.
 
 ## Vapor
 
