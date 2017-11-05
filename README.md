@@ -43,8 +43,8 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 ## MySQL
 
 1. Install the MySQL APT repository: `wget https://dev.mysql.com/get/mysql-apt-config_0.8.8-1_all.deb`, then `sudo dpkg --install mysql-apt-config_0.8.8-1_all.deb`, then `sudo apt-get update`.
-2. Install MySQL (5.7.19-1ubuntu16.04): `sudo apt-get install mysql-server`.
-3. Install [libmysqlclient-dev](http://packages.ubuntu.com/trusty/libmysqlclient-dev) (5.7.19-1ubuntu16.04): `sudo apt-get install libmysqlclient-dev`.
+2. Install MySQL (5.7.20-1ubuntu16.04): `sudo apt-get install mysql-server`.
+3. Install [libmysqlclient-dev](http://packages.ubuntu.com/trusty/libmysqlclient-dev) (5.7.20-1ubuntu16.04): `sudo apt-get install libmysqlclient-dev`.
 4. (Recommended) Create/edit the `ubuntu` user's MySQL option file at `~/.my.cnf`, i.e.:
 
    ```
@@ -72,7 +72,7 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
 ## Vapor
 
-1. Follow the instructions in Vapor's [guide](https://vapor.github.io/documentation/getting-started/install-swift-3-ubuntu.html) to install Vapor (2.0.4).
+1. Follow the instructions in Vapor's [guide](https://vapor.github.io/documentation/getting-started/install-swift-3-ubuntu.html) to install Vapor (3.1.2).
 2. See Vapor's [example](https://github.com/vapor/example) to set up Vapor with [Upstart](http://upstart.ubuntu.com).
 
 ---
