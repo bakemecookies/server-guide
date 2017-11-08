@@ -42,7 +42,7 @@ Identity files should be located locally at `~/.ssh/`. Adjust all identity-relat
 
 ## MySQL
 
-1. Install the MySQL APT repository: `wget https://dev.mysql.com/get/mysql-apt-config_0.8.8-1_all.deb`, then `sudo dpkg --install mysql-apt-config_0.8.8-1_all.deb`, then `sudo apt-get update`.
+1. Install the MySQL APT repository: `wget https://dev.mysql.com/get/mysql-apt-config_0.8.9-1_all.deb`, then `sudo dpkg --install mysql-apt-config_0.8.9-1_all.deb`, then `sudo apt-get update`.
 2. Install MySQL (5.7.20-1ubuntu16.04): `sudo apt-get install mysql-server`.
 3. Install [libmysqlclient-dev](http://packages.ubuntu.com/trusty/libmysqlclient-dev) (5.7.20-1ubuntu16.04): `sudo apt-get install libmysqlclient-dev`.
 4. (Recommended) Create/edit the `ubuntu` user's MySQL option file at `~/.my.cnf`, i.e.:
